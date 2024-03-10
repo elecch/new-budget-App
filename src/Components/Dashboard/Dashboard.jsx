@@ -4,7 +4,6 @@ import { useGlobalContext } from "../../context/globalContext";
 import History from "../../History/History";
 import { InnerLayout } from "../../styles/Layouts";
 import { won } from "../../utils/Icons";
-import Chart from "../Chart/Chart";
 
 function Dashboard() {
   const {
@@ -28,7 +27,6 @@ function Dashboard() {
         <h1 className="dashboard-title">모든 거래내역</h1>
         <div className="stats-con">
           <div className="chart-con">
-            <Chart />
             <div className="amount-con">
               <div className="income">
                 <h2>전체 수입</h2>

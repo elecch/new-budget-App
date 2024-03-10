@@ -4,13 +4,13 @@ import avatar from "../../img/avatar.png";
 import { signout } from "../../utils/Icons";
 import { menuItems } from "../../utils/menuItems";
 
-function Navigation({ active, setActive }) {
+function Navigation({ username, active, setActive }) {
   return (
     <NavStyled>
       <div className="user-con">
         <img src={avatar} alt="" />
         <div className="text">
-          <h2>찬홍</h2>
+          <h2>{username}</h2>
         </div>
       </div>
       <ul className="menu-items">
@@ -27,9 +27,6 @@ function Navigation({ active, setActive }) {
           );
         })}
       </ul>
-      <div className="bottom-nav">
-        <li>{signout} 로그 아웃</li>
-      </div>
     </NavStyled>
   );
 }

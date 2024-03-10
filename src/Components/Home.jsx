@@ -10,6 +10,7 @@ import axios from "axios";
 import styled from "styled-components";
 import bg from "../img/bg.png";
 import { MainLayout } from "../styles/Layouts";
+import Chart from "../Components/Chart/Chart";
 
 axios.defaults.withCredentials = true;
 
@@ -26,7 +27,7 @@ export default function Home() {
       case 1:
         return <Dashboard />;
       case 2:
-        return <Dashboard />;
+        return <Chart />;
       case 3:
         return <Income />;
       case 4:
@@ -61,11 +62,14 @@ export default function Home() {
     <div>
       {isLoggedIn ? (
         <>
-          {userData.username}
           <AppStyled bg={bg} className="App">
             {orbMemo}
             <MainLayout>
-              <Navigation active={active} setActive={setActive} />
+              <Navigation
+                username={userData.username}
+                active={active}
+                setActive={setActive}
+              />
               <main>{displayData()}</main>
             </MainLayout>
           </AppStyled>

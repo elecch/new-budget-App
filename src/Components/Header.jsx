@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <nav className="h-[60px] flex w-full bg-slate-900 text-white p-3 justify-between items-center">
       <h2
-        onClick={() => navigate("/")}
+        onClick={() => navigate(0)}
         className="font-bold text-xl cursor-pointer select-none"
       >
         가장 보기 편한 가계부 앱. 땡그랑
